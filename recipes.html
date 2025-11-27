@@ -49,8 +49,49 @@
         <h1 class="font-heading text-4xl font-bold mb-12 text-center">Authentic Recipes</h1>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Recipe 1 -->
-            <article class="bg-white rounded-lg shadow-md overflow-hidden">
+            <!-- Recipe: Doubles -->
+            <article id="doubles" class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="./img/doubles.jpg" alt="Doubles" class="w-full h-56 object-cover">
+                <div class="p-6">
+                    <h2 class="font-heading text-2xl font-bold mb-2">Doubles</h2>
+                    <p class="text-gray-600 mb-4">The ultimate street food. Curried channa sandwiched between two baras.
+                    </p>
+                    <h3 class="font-bold mb-2">Ingredients:</h3>
+                    <ul class="list-disc list-inside mb-4 text-sm text-gray-700">
+                        <li>2 cups flour (for bara)</li>
+                        <li>1 tsp turmeric</li>
+                        <li>2 cups chickpeas (channa)</li>
+                        <li>1 tbsp curry powder</li>
+                        <li>Cucumber chutney</li>
+                    </ul>
+                    <button data-recipe-id="doubles"
+                        class="view-recipe-btn bg-trini-red text-white px-4 py-2 rounded hover:bg-red-700 transition w-full">View
+                        Full Recipe</button>
+                </div>
+            </article>
+
+            <!-- Recipe: Roti -->
+            <article id="roti" class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="./img/roti.jpg" alt="Roti" class="w-full h-56 object-cover">
+                <div class="p-6">
+                    <h2 class="font-heading text-2xl font-bold mb-2">Dhalpuri Roti</h2>
+                    <p class="text-gray-600 mb-4">Soft, flaky flatbread stuffed with ground split peas.</p>
+                    <h3 class="font-bold mb-2">Ingredients:</h3>
+                    <ul class="list-disc list-inside mb-4 text-sm text-gray-700">
+                        <li>4 cups flour</li>
+                        <li>1 cup yellow split peas</li>
+                        <li>3 cloves garlic</li>
+                        <li>1 tbsp ground cumin (geera)</li>
+                        <li>Baking powder</li>
+                    </ul>
+                    <button data-recipe-id="roti"
+                        class="view-recipe-btn bg-trini-red text-white px-4 py-2 rounded hover:bg-red-700 transition w-full">View
+                        Full Recipe</button>
+                </div>
+            </article>
+
+            <!-- Recipe: Pelau -->
+            <article id="pelau" class="bg-white rounded-lg shadow-md overflow-hidden">
                 <img src="./img/pelau.jpg" alt="Pelau" class="w-full h-56 object-cover">
                 <div class="p-6">
                     <h2 class="font-heading text-2xl font-bold mb-2">Chicken Pelau</h2>
@@ -63,12 +104,13 @@
                         <li>1 cup coconut milk</li>
                         <li>2 tbsp brown sugar</li>
                     </ul>
-                    <button class="bg-trini-red text-white px-4 py-2 rounded hover:bg-red-700 transition w-full">View
+                    <button data-recipe-id="pelau"
+                        class="view-recipe-btn bg-trini-red text-white px-4 py-2 rounded hover:bg-red-700 transition w-full">View
                         Full Recipe</button>
                 </div>
             </article>
 
-            <!-- Recipe 2 -->
+            <!-- Recipe: Callaloo -->
             <article class="bg-white rounded-lg shadow-md overflow-hidden">
                 <img src="./img/callaloo.jpg" alt="Callaloo" class="w-full h-56 object-cover">
                 <div class="p-6">
@@ -82,12 +124,13 @@
                         <li>1 crab (optional)</li>
                         <li>Pumpkin, onions, garlic</li>
                     </ul>
-                    <button class="bg-trini-red text-white px-4 py-2 rounded hover:bg-red-700 transition w-full">View
+                    <button data-recipe-id="callaloo"
+                        class="view-recipe-btn bg-trini-red text-white px-4 py-2 rounded hover:bg-red-700 transition w-full">View
                         Full Recipe</button>
                 </div>
             </article>
 
-            <!-- Recipe 3 -->
+            <!-- Recipe: Curry Chicken -->
             <article class="bg-white rounded-lg shadow-md overflow-hidden">
                 <img src="./img/curry_chicken.jpg" alt="Curry Chicken" class="w-full h-56 object-cover">
                 <div class="p-6">
@@ -101,7 +144,8 @@
                         <li>4 cloves garlic</li>
                         <li>Hot pepper to taste</li>
                     </ul>
-                    <button class="bg-trini-red text-white px-4 py-2 rounded hover:bg-red-700 transition w-full">View
+                    <button data-recipe-id="curry_chicken"
+                        class="view-recipe-btn bg-trini-red text-white px-4 py-2 rounded hover:bg-red-700 transition w-full">View
                         Full Recipe</button>
                 </div>
             </article>
@@ -110,9 +154,36 @@
 
     <footer class="bg-gray-900 text-white py-8 mt-12">
         <div class="container mx-auto px-4 text-center">
-            <p>&copy; 2024 TriniFood. All rights reserved.</p>
+            <p>&copy; 2025 TriniFood. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- Recipe Modal -->
+    <div id="recipe-modal"
+        class="fixed inset-0 bg-black bg-opacity-75 hidden flex items-center justify-center z-50 p-4">
+        <div class="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto relative">
+            <button id="close-modal" class="absolute top-4 right-4 text-gray-600 hover:text-gray-900">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
+            </button>
+            <div class="p-8">
+                <h2 id="modal-title" class="font-heading text-3xl font-bold mb-4">Recipe Title</h2>
+                <img id="modal-image" src="" alt="Recipe" class="w-full h-64 object-cover rounded-lg mb-6">
+
+                <h3 class="font-bold text-xl mb-2">Ingredients</h3>
+                <ul id="modal-ingredients" class="list-disc list-inside mb-6 text-gray-700">
+                    <!-- Ingredients will be populated here -->
+                </ul>
+
+                <h3 class="font-bold text-xl mb-2">Instructions</h3>
+                <ol id="modal-instructions" class="list-decimal list-inside text-gray-700 space-y-2">
+                    <!-- Instructions will be populated here -->
+                </ol>
+            </div>
+        </div>
+    </div>
 
     <script src="./js/main.js"></script>
 </body>

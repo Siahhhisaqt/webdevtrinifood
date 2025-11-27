@@ -26,5 +26,3 @@ A 6-page responsive website showcasing Trinidadian cuisine, built with **HTML5**
 -   **Run Locally**: `npm install` -> `npm run build:css` -> Open `index.html`.
 -   **Live Deployment**: Ready for Netlify/Vercel (Build command: `npm run build:css`).
 
-## Screenshots
-*(Insert your Lighthouse Performance Score screenshot here)*
