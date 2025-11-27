@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes - TriniFood</title>
+    <meta name="description" content="Authentic recipes for Trinidadian dishes like Pelau, Roti, and Callaloo.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/tailwind-config.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="font-sans text-gray-800 bg-gray-50 flex flex-col min-h-screen">
+    <nav class="bg-trini-red text-white shadow-lg">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="font-heading text-2xl font-bold">TriniFood</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="hover:text-gray-200 transition">Home</a>
+                <a href="about.html" class="hover:text-gray-200 transition">About</a>
+                <a href="recipes.html"
+                    class="hover:text-gray-200 transition font-bold border-b-2 border-white">Recipes</a>
+                <a href="gallery.html" class="hover:text-gray-200 transition">Gallery</a>
+                <a href="culture.html" class="hover:text-gray-200 transition">Culture</a>
+                <a href="contact.html" class="hover:text-gray-200 transition">Contact</a>
+            </div>
+            <button id="mobile-menu-btn" class="md:hidden focus:outline-none" aria-label="Toggle mobile menu" aria-expanded="false">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-trini-red pb-4 px-4">
+            <a href="index.html" class="block py-2 hover:bg-red-700 rounded">Home</a>
+            <a href="about.html" class="block py-2 hover:bg-red-700 rounded">About</a>
+            <a href="recipes.html" class="block py-2 hover:bg-red-700 rounded">Recipes</a>
+            <a href="gallery.html" class="block py-2 hover:bg-red-700 rounded">Gallery</a>
+            <a href="culture.html" class="block py-2 hover:bg-red-700 rounded">Culture</a>
+            <a href="contact.html" class="block py-2 hover:bg-red-700 rounded">Contact</a>
+        </div>
+    </nav>
+
+    <main class="flex-grow container mx-auto px-4 py-12">
+        <h1 class="font-heading text-4xl font-bold mb-12 text-center">Authentic Recipes</h1>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Recipe 1 -->
+            <article class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="./img/pelau.jpg" alt="Pelau" class="w-full h-56 object-cover">
+                <div class="p-6">
+                    <h2 class="font-heading text-2xl font-bold mb-2">Chicken Pelau</h2>
+                    <p class="text-gray-600 mb-4">The national dish of Trinidad and Tobago. A savory one-pot meal.</p>
+                    <h3 class="font-bold mb-2">Ingredients:</h3>
+                    <ul class="list-disc list-inside mb-4 text-sm text-gray-700">
+                        <li>2 lbs chicken pieces</li>
+                        <li>2 cups rice</li>
+                        <li>1 cup pigeon peas</li>
+                        <li>1 cup coconut milk</li>
+                        <li>2 tbsp brown sugar</li>
+                    </ul>
+                    <button class="bg-trini-red text-white px-4 py-2 rounded hover:bg-red-700 transition w-full">View
+                        Full Recipe</button>
+                </div>
+            </article>
+
+            <!-- Recipe 2 -->
+            <article class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="./img/callaloo.jpg" alt="Callaloo" class="w-full h-56 object-cover">
+                <div class="p-6">
+                    <h2 class="font-heading text-2xl font-bold mb-2">Callaloo</h2>
+                    <p class="text-gray-600 mb-4">A creamy, spicy side dish made from dasheen bush (taro leaves).</p>
+                    <h3 class="font-bold mb-2">Ingredients:</h3>
+                    <ul class="list-disc list-inside mb-4 text-sm text-gray-700">
+                        <li>1 bundle dasheen bush</li>
+                        <li>1 cup ochroes (okra)</li>
+                        <li>1 cup coconut milk</li>
+                        <li>1 crab (optional)</li>
+                        <li>Pumpkin, onions, garlic</li>
+                    </ul>
+                    <button class="bg-trini-red text-white px-4 py-2 rounded hover:bg-red-700 transition w-full">View
+                        Full Recipe</button>
+                </div>
+            </article>
+
+            <!-- Recipe 3 -->
+            <article class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="./img/curry_chicken.jpg" alt="Curry Chicken" class="w-full h-56 object-cover">
+                <div class="p-6">
+                    <h2 class="font-heading text-2xl font-bold mb-2">Curry Chicken</h2>
+                    <p class="text-gray-600 mb-4">Rich, spicy, and perfect with roti or white rice.</p>
+                    <h3 class="font-bold mb-2">Ingredients:</h3>
+                    <ul class="list-disc list-inside mb-4 text-sm text-gray-700">
+                        <li>2 lbs chicken</li>
+                        <li>4 tbsp curry powder</li>
+                        <li>1 onion, chopped</li>
+                        <li>4 cloves garlic</li>
+                        <li>Hot pepper to taste</li>
+                    </ul>
+                    <button class="bg-trini-red text-white px-4 py-2 rounded hover:bg-red-700 transition w-full">View
+                        Full Recipe</button>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer class="bg-gray-900 text-white py-8 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 TriniFood. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - TriniFood</title>
+    <meta name="description" content="Learn about the rich culinary heritage of Trinidad and Tobago.">
+    <script src="https://cdn.tailwindcss.com"></script><script src="./js/tailwind-config.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="font-sans text-gray-800 bg-gray-50 flex flex-col min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-trini-red text-white shadow-lg">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="font-heading text-2xl font-bold">TriniFood</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="hover:text-gray-200 transition">Home</a>
+                <a href="about.html" class="hover:text-gray-200 transition font-bold border-b-2 border-white">About</a>
+                <a href="recipes.html" class="hover:text-gray-200 transition">Recipes</a>
+                <a href="gallery.html" class="hover:text-gray-200 transition">Gallery</a>
+                <a href="culture.html" class="hover:text-gray-200 transition">Culture</a>
+                <a href="contact.html" class="hover:text-gray-200 transition">Contact</a>
+            </div>
+            <button id="mobile-menu-btn" class="md:hidden focus:outline-none" aria-label="Toggle mobile menu" aria-expanded="false">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-trini-red pb-4 px-4">
+            <a href="index.html" class="block py-2 hover:bg-red-700 rounded">Home</a>
+            <a href="about.html" class="block py-2 hover:bg-red-700 rounded">About</a>
+            <a href="recipes.html" class="block py-2 hover:bg-red-700 rounded">Recipes</a>
+            <a href="gallery.html" class="block py-2 hover:bg-red-700 rounded">Gallery</a>
+            <a href="culture.html" class="block py-2 hover:bg-red-700 rounded">Culture</a>
+            <a href="contact.html" class="block py-2 hover:bg-red-700 rounded">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <main class="flex-grow container mx-auto px-4 py-12">
+        <h1 class="font-heading text-4xl font-bold mb-8 text-center">About TriniFood</h1>
+        <div class="flex flex-col md:flex-row gap-12 items-center">
+            <div class="md:w-1/2">
+                <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                    alt="Caribbean Spices" class="rounded-lg shadow-lg w-full">
+            </div>
+            <div class="md:w-1/2">
+                <p class="text-lg mb-6 leading-relaxed">
+                    Welcome to TriniFood, your digital gateway to the explosive flavors of Trinidad and Tobago. Our
+                    mission is to share the unique culinary traditions of our twin-island republic with the world.
+                </p>
+                <p class="text-lg mb-6 leading-relaxed">
+                    Trinidadian cuisine is a melting pot of influences—African, Indian, Chinese, Syrian, Lebanese, and
+                    European. This rich diversity creates a food culture that is unlike any other, characterized by bold
+                    spices, fresh herbs, and a love for "lime" (hanging out) with good food.
+                </p>
+                <p class="text-lg leading-relaxed">
+                    Whether you're looking for the perfect recipe for Sunday lunch or want to learn about the history
+                    behind our famous street foods, you've come to the right place.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 TriniFood. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

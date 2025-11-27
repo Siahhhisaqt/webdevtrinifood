@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Culture & History - TriniFood</title>
+    <meta name="description" content="Explore the history and cultural influences of Trinidadian cuisine.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/tailwind-config.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="font-sans text-gray-800 bg-gray-50 flex flex-col min-h-screen">
+    <nav class="bg-trini-red text-white shadow-lg">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="font-heading text-2xl font-bold">TriniFood</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="hover:text-gray-200 transition">Home</a>
+                <a href="about.html" class="hover:text-gray-200 transition">About</a>
+                <a href="recipes.html" class="hover:text-gray-200 transition">Recipes</a>
+                <a href="gallery.html" class="hover:text-gray-200 transition">Gallery</a>
+                <a href="culture.html"
+                    class="hover:text-gray-200 transition font-bold border-b-2 border-white">Culture</a>
+                <a href="contact.html" class="hover:text-gray-200 transition">Contact</a>
+            </div>
+            <button id="mobile-menu-btn" class="md:hidden focus:outline-none" aria-label="Toggle mobile menu" aria-expanded="false">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-trini-red pb-4 px-4">
+            <a href="index.html" class="block py-2 hover:bg-red-700 rounded">Home</a>
+            <a href="about.html" class="block py-2 hover:bg-red-700 rounded">About</a>
+            <a href="recipes.html" class="block py-2 hover:bg-red-700 rounded">Recipes</a>
+            <a href="gallery.html" class="block py-2 hover:bg-red-700 rounded">Gallery</a>
+            <a href="culture.html" class="block py-2 hover:bg-red-700 rounded">Culture</a>
+            <a href="contact.html" class="block py-2 hover:bg-red-700 rounded">Contact</a>
+        </div>
+    </nav>
+
+    <main class="flex-grow container mx-auto px-4 py-12">
+        <h1 class="font-heading text-4xl font-bold mb-12 text-center">A Melting Pot of Flavors</h1>
+
+        <div class="space-y-12">
+            <section class="flex flex-col md:flex-row gap-8 items-center">
+                <div class="md:w-1/2">
+                    <h2 class="font-heading text-2xl font-bold mb-4 text-trini-red">African Influence</h2>
+                    <p class="text-lg leading-relaxed mb-4">
+                        From the rich stews to the use of ground provisions (root vegetables) like yams and cassava, the
+                        African influence is foundational. Dishes like Callaloo and Coo-Coo (similar to polenta) are
+                        direct descendants of West African cuisine.
+                    </p>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="./img/callaloo.jpg" alt="Callaloo" class="rounded-lg shadow-lg w-full h-64 object-cover">
+                </div>
+            </section>
+
+            <section class="flex flex-col md:flex-row-reverse gap-8 items-center">
+                <div class="md:w-1/2">
+                    <h2 class="font-heading text-2xl font-bold mb-4 text-trini-red">Indian Influence</h2>
+                    <p class="text-lg leading-relaxed mb-4">
+                        Indentured laborers from India brought with them spices, curries, and rotis. Today, curry is a
+                        staple, and "Roti shops" are ubiquitous. Doubles, the most popular street food, is a chickpea
+                        curry served on fried flatbread.
+                    </p>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="./img/roti.jpg" alt="Roti" class="rounded-lg shadow-lg w-full h-64 object-cover">
+                </div>
+            </section>
+
+            <section class="flex flex-col md:flex-row gap-8 items-center">
+                <div class="md:w-1/2">
+                    <h2 class="font-heading text-2xl font-bold mb-4 text-trini-red">Chinese & Other Influences</h2>
+                    <p class="text-lg leading-relaxed mb-4">
+                        Chinese immigrants introduced stir-frying and soy sauce, leading to unique "Trini-Chinese"
+                        dishes. Syrian and Lebanese communities contributed gyros and spices. The result is a truly
+                        global cuisine that is distinctly Trinidadian.
+                    </p>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Stir Fry" class="rounded-lg shadow-lg w-full h-64 object-cover">
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="bg-gray-900 text-white py-8 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 TriniFood. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

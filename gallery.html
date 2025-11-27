@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - TriniFood</title>
+    <meta name="description" content="Visual journey through the food of Trinidad and Tobago.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/tailwind-config.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="font-sans text-gray-800 bg-gray-50 flex flex-col min-h-screen">
+    <nav class="bg-trini-red text-white shadow-lg">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="font-heading text-2xl font-bold">TriniFood</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="hover:text-gray-200 transition">Home</a>
+                <a href="about.html" class="hover:text-gray-200 transition">About</a>
+                <a href="recipes.html" class="hover:text-gray-200 transition">Recipes</a>
+                <a href="gallery.html"
+                    class="hover:text-gray-200 transition font-bold border-b-2 border-white">Gallery</a>
+                <a href="culture.html" class="hover:text-gray-200 transition">Culture</a>
+                <a href="contact.html" class="hover:text-gray-200 transition">Contact</a>
+            </div>
+            <button id="mobile-menu-btn" class="md:hidden focus:outline-none" aria-label="Toggle mobile menu" aria-expanded="false">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-trini-red pb-4 px-4">
+            <a href="index.html" class="block py-2 hover:bg-red-700 rounded">Home</a>
+            <a href="about.html" class="block py-2 hover:bg-red-700 rounded">About</a>
+            <a href="recipes.html" class="block py-2 hover:bg-red-700 rounded">Recipes</a>
+            <a href="gallery.html" class="block py-2 hover:bg-red-700 rounded">Gallery</a>
+            <a href="culture.html" class="block py-2 hover:bg-red-700 rounded">Culture</a>
+            <a href="contact.html" class="block py-2 hover:bg-red-700 rounded">Contact</a>
+        </div>
+    </nav>
+
+    <main class="flex-grow container mx-auto px-4 py-12">
+        <h1 class="font-heading text-4xl font-bold mb-12 text-center">Food Gallery</h1>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4" id="gallery-grid">
+            <!-- Gallery Items (using placeholder images) -->
+            <div class="relative group cursor-pointer overflow-hidden rounded-lg shadow-md aspect-square"
+                onclick="openLightbox(this)">
+                <img src="./img/breakfast.jpg" alt="Trini Breakfast"
+                    class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy">
+                <div
+                    class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition duration-300 flex items-center justify-center">
+                    <span class="text-white opacity-0 group-hover:opacity-100 font-bold text-lg">Breakfast</span>
+                </div>
+            </div>
+            <div class="relative group cursor-pointer overflow-hidden rounded-lg shadow-md aspect-square"
+                onclick="openLightbox(this)">
+                <img src="./img/doubles.jpg" alt="Doubles Vendor"
+                    class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy">
+                <div
+                    class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition duration-300 flex items-center justify-center">
+                    <span class="text-white opacity-0 group-hover:opacity-100 font-bold text-lg">Street Food</span>
+                </div>
+            </div>
+            <div class="relative group cursor-pointer overflow-hidden rounded-lg shadow-md aspect-square"
+                onclick="openLightbox(this)">
+                <img src="./img/roti.jpg" alt="Roti Meal"
+                    class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy">
+                <div
+                    class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition duration-300 flex items-center justify-center">
+                    <span class="text-white opacity-0 group-hover:opacity-100 font-bold text-lg">Lunch</span>
+                </div>
+            </div>
+            <div class="relative group cursor-pointer overflow-hidden rounded-lg shadow-md aspect-square"
+                onclick="openLightbox(this)">
+                <img src="./img/pelau.jpg" alt="Pelau Pot"
+                    class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy">
+                <div
+                    class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition duration-300 flex items-center justify-center">
+                    <span class="text-white opacity-0 group-hover:opacity-100 font-bold text-lg">Dinner</span>
+                </div>
+            </div>
+            <div class="relative group cursor-pointer overflow-hidden rounded-lg shadow-md aspect-square"
+                onclick="openLightbox(this)">
+                <img src="./img/ingredients.jpg" alt="Spices"
+                    class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy">
+                <div
+                    class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition duration-300 flex items-center justify-center">
+                    <span class="text-white opacity-0 group-hover:opacity-100 font-bold text-lg">Ingredients</span>
+                </div>
+            </div>
+            <div class="relative group cursor-pointer overflow-hidden rounded-lg shadow-md aspect-square"
+                onclick="openLightbox(this)">
+                <img src="./img/callaloo.jpg" alt="Callaloo Bowl"
+                    class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy">
+                <div
+                    class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition duration-300 flex items-center justify-center">
+                    <span class="text-white opacity-0 group-hover:opacity-100 font-bold text-lg">Sides</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 z-50 bg-black bg-opacity-90 hidden flex items-center justify-center p-4"
+        onclick="closeLightbox()">
+        <span class="absolute top-4 right-4 text-white text-4xl cursor-pointer hover:text-gray-300">&times;</span>
+        <img id="lightbox-img" src="" alt="Full size" class="max-w-full max-h-full rounded shadow-lg">
+    </div>
+
+    <footer class="bg-gray-900 text-white py-8 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 TriniFood. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
